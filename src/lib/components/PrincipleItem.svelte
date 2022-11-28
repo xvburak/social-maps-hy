@@ -34,7 +34,7 @@
     @apply inline-block
 } */
 
-.subs {
+/* .subs {
         @apply hidden
     }
 
@@ -42,6 +42,6 @@
     .subs {
         @apply inline-block
     }
-}
+} */
         
 </style>
