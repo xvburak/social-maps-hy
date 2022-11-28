@@ -8,20 +8,15 @@
 </script>
 
 <div class="bg-gray min-h-screen text-white pt-28 p-8">
-    <div class="pt-8">
+    <div class="pt-8 max-w-screen-xl mx-auto">
         {#if locale.includes('/en')}
             {#each data as item}
-                <div>
-                    <p><span>{item.emoji}</span>{item.titleEn}</p>
-                    <p>{item.textEn}</p>
-                </div>
+            <PrincipleItem emoji={item.emoji} title={item.titleEn} text={item.textEn} />
+
             {/each}
         {:else}
             {#each data as item}
-                <div class="bg-white mb-4 text-black p-8 rounded-xl">
-                    <p class="text-m mb-8"><span class="mr-4">{item.emoji}</span>{item.titleCs}</p>
-                    <p class="text-s">{@html item.textCs}</p>
-                </div>
+                <PrincipleItem emoji={item.emoji} title={item.titleCs} text={item.textCs} />
             {/each}
         {/if} 
     </div>
