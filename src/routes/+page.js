@@ -38,6 +38,9 @@ export async function load() {
           textEn
           titleCs
           titleEn
+          image {
+            url
+          }
         }
       }
       functionsInfo {

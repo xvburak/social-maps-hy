@@ -35,15 +35,21 @@
 </main>
 
 {#if $activeSectionId === "heroSection"}
-<div class="action p-2 bg-purple fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
+<div class="action p-2 bg-purple text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
     <div class="w-full">
         <a class="text-center block" href="#aboutSection">O aplikaci 👇</a>
     </div> 
 </div>
 {:else if $activeSectionId === "aboutSection"}
-<div class="action p-2 bg-gray  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
+<div class="action p-2 bg-gray text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
     <div class="w-full">
         <a class="text-center block" href="#principlesSection">Základní principy aplikace 👇</a>
+    </div> 
+</div>
+{:else if $activeSectionId === "principlesSection"}
+<div class="action p-2 bg-yellow text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
+    <div class="w-full">
+        <a class="text-center block" href="#functionsSection">Hlavní funkce aplikace 👇</a>
     </div> 
 </div>
 {/if}

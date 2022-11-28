@@ -1,5 +1,7 @@
 <script>
     import "../app.css";
+    import '@splidejs/svelte-splide/css/core';
+
     import { page } from '$app/stores';
     let locale = $page.url.pathname
 
@@ -16,7 +18,7 @@
     }
 </script>
 
-<div class="shadow-xl h-16 w-16 bg-white rounded-full justify-center flex items-center fixed top-4 md:top-8 top-4 md:left-8 z-50">
+<div class="shadow-xl h-16 w-16 bg-white rounded-full justify-center flex items-center fixed top-4 md:top-8 left-4 md:left-8 z-50">
     {#if locale.includes('/en')}
         <button class="text-l" on:click={toCs}>🇨🇿</button>
     {:else}
