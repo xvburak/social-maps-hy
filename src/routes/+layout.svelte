@@ -16,7 +16,7 @@
     }
 </script>
 
-<div class="h-16 w-16 bg-white rounded-full justify-center flex items-center fixed top-4 md:top-8 top-4 md:left-8 z-50">
+<div class="shadow-xl h-16 w-16 bg-white rounded-full justify-center flex items-center fixed top-4 md:top-8 top-4 md:left-8 z-50">
     {#if locale.includes('/en')}
         <button class="text-l" on:click={toCs}>🇨🇿</button>
     {:else}
