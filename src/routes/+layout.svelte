@@ -1,4 +1,6 @@
 <script>
+    import "../app.css";
+
     function toEn() {
         const pageurl = new URL(location.href);
         pageurl.pathname = 'en' + pageurl.pathname;
@@ -12,6 +14,9 @@
     }
 </script>
 
+<div class="h-16 w-16 bg-green rounded-full fixed top-8 left-8 z-50">
+
+</div>
 <button on:click={toEn}>🇬🇧</button>
 <button on:click={toCs}>🇨🇿</button>
 

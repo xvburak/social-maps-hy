@@ -24,8 +24,23 @@ export async function load() {
       aboutOne {
         textCs
         textEn
+        image {
+          url
+        }
       }
       aboutTwo {
+        textCs
+        textEn
+      }
+      function {
+        ... on SideScroll {
+          textCs
+          textEn
+          titleCs
+          titleEn
+        }
+      }
+      functionsInfo {
         textCs
         textEn
       }
