@@ -12,10 +12,9 @@
 </script>
 <main>
     <ScrollSection id="heroSection">
-        <div class="min-h-screen bg-gray">
+        <div class="min-h-screen flex items-center justify-center bg-gray">
             <h1>🧭 Social Maps</h1>
         </div>
-        
     </ScrollSection>
     
     <ScrollSection id="aboutSection">
@@ -35,7 +34,7 @@
     </ScrollSection>
 </main>
 
-{#if $activeSectionId === "heroSection"}
+<!-- {#if $activeSectionId === "heroSection"}
 <div class="fixed top-0 right-0">  
     <div class="">
         <a class="" href="#aboutSection">O aplikaci 👇</a>
@@ -47,7 +46,7 @@
         <a class="" href="#aboutSection">Základní principy aplikace👇</a>
     </div> 
 </div>
-{/if}
+{/if} -->
 
 
 

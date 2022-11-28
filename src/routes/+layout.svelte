@@ -1,5 +1,7 @@
 <script>
     import "../app.css";
+    import { page } from '$app/stores';
+    let locale = $page.url.pathname
 
     function toEn() {
         const pageurl = new URL(location.href);
@@ -14,10 +16,13 @@
     }
 </script>
 
-<div class="h-16 w-16 bg-green rounded-full fixed top-8 left-8 z-50">
-
+<div class="h-16 w-16 bg-white rounded-full justify-center flex items-center fixed top-8 left-8 z-50">
+    {#if locale.includes('/en')}
+        <button class="text-l" on:click={toCs}>🇨🇿</button>
+    {:else}
+        <button class="text-l" on:click={toEn}>🇬🇧</button>
+    {/if}  
 </div>
-<button on:click={toEn}>🇬🇧</button>
-<button on:click={toCs}>🇨🇿</button>
+
 
 <slot />

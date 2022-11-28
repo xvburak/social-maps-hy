@@ -16,7 +16,7 @@ export async function load() {
       support {
         textCs
         textEn
-      },
+      }
       download {
         textCs
         textEn

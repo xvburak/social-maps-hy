@@ -6,7 +6,7 @@
 
 
 {#if locale.includes('/en')}
-<div class="bg-purple min-h-screen text-white items-center flex flex-col md:flex-row md:space-x-4 pt-28 md:pt-0">
+<div class="bg-purple min-h-screen text-white items-center flex flex-col md:flex-row md:space-x-4 pt-28 md:pt-8">
     <div class="copy py-4 px-8 w-full md:w-1/2 h-min">
         <p>{@html data.aboutOne.textEn}</p>
     </div>
@@ -16,7 +16,7 @@
     
 </div>
 
-<div class="bg-purple min-h-screen text-white items-center flex flex-col md:flex-row md:space-x-4 pt-28 md:pt-0">
+<div class="bg-purple min-h-screen text-white items-center flex flex-col-reverse md:flex-row md:space-x-4 pt-28 md:pt-8">
     <div class="w-full md:w-1/2">
         <img class="" src={data.aboutOne.image.url} alt="mockup aplikace">
     </div>
@@ -25,7 +25,7 @@
     </div>
 </div>
 {:else}
-<div class="bg-purple min-h-screen text-white items-center flex flex-col md:flex-row md:space-x-4 pt-28 md:pt-0">
+<div class="bg-purple min-h-screen text-white items-center flex flex-col md:flex-row md:space-x-4 pt-28 md:pt-8">
     <div class="copy py-4 px-8 w-full md:w-1/2 h-min">
         <p>{@html data.aboutOne.textCs}</p>
     </div>
@@ -35,7 +35,7 @@
     
 </div>
 
-<div class="bg-purple min-h-screen text-white items-center flex flex-col md:flex-row md:space-x-4 pt-28 md:pt-0">
+<div class="bg-purple min-h-screen text-white items-center flex flex-col-reverse md:flex-row md:space-x-4 pt-28 md:pt-8">
     <div class="w-full md:w-1/2">
         <img class="" src={data.aboutOne.image.url} alt="mockup aplikace">
     </div>

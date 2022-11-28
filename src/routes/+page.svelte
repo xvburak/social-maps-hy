@@ -12,7 +12,9 @@
 </script>
 <main class="bg-gray">
     <ScrollSection id="heroSection">
-        <h1>🧭 Social Maps</h1>
+        <div class="min-h-screen flex items-center justify-center bg-gray">
+            <h1>🧭 Social Maps</h1>
+        </div>
     </ScrollSection>
     
     <ScrollSection id="aboutSection">
