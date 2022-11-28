@@ -7,7 +7,7 @@
 
     function toCs() {
         const pageurl = new URL(location.href);
-        pageurl.pathname =  pageurl.pathname.replace('en/', '');
+        pageurl.pathname =  pageurl.pathname.replace('/en', '');
         window.location.href = pageurl.pathname
         // console.log(pageurl.pathname)
     }
