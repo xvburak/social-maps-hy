@@ -52,7 +52,7 @@
     </div>
 </div>
 <div class="text-center border p-4 md:p-16 px-8">
-    <p class="">{@html data.newsletter.textCs}</p>
+    <p class="newsletter">{@html data.newsletter.textCs}</p>
     <div class=" max-w-screen-sm mx-auto">
     <!-- <Form
         on:submit={handleSubmit}

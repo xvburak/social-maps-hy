@@ -29,7 +29,6 @@
 	"type": "module",
 	"dependencies": {
 		"@splidejs/svelte-splide": "^0.2.9",
-		"svelte-inview": "^3.0.1",
-		"sveltejs-forms": "^2.1.2"
+		"svelte-inview": "^3.0.1"
 	}
 }
