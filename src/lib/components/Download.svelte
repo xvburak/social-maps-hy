@@ -1,5 +1,6 @@
 <script>
     // import { Form, Input } from 'sveltejs-forms';
+    import DownloadItem from './DownloadItem.svelte';
     import {
         page
     } from '$app/stores';
@@ -21,9 +22,15 @@
         <p>{@html data.download.textEn}</p>
     </div>
 </div>
-<div class="text-center border p-4 md:p-16 px-8">
-    <p class="">{@html data.newsletter.textEn}</p>
+<div class="text-center  p-4 pb-4 md:pt-8 px-8">
+    <p class="newsletter">{@html data.newsletter.textCs}</p>
     <div class=" max-w-screen-sm mx-auto">
+        <div class="py-8">
+            <div class="bg-offwhite border text-gray flex flex-col justify-center text-center h-16 flex-1 rounded-full">
+                <p>email@email.com</p>
+            </div>
+        </div>
+        
     <!-- <Form
         on:submit={handleSubmit}
         let:isSubmitting>
@@ -44,6 +51,11 @@
         </Form> -->
     </div>
    
+</div>
+<div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mb-8 px-8">
+    <DownloadItem text={data.email.textCs} image={data.email.image.url}  />
+    <DownloadItem text={data.discord.textCs} image={data.discord.image.url} />
+    <DownloadItem text={data.support.textCs} image={data.support.image.url} />
 </div>
 {:else}
 <div class="bg-red  text-white items-center flex py-20 md:py-28 p-4 md:p-8">
@@ -51,9 +63,15 @@
         <p>{@html data.download.textCs}</p>
     </div>
 </div>
-<div class="text-center border p-4 md:p-16 px-8">
+<div class="text-center  p-4 pb-4 md:pt-8 px-8">
     <p class="newsletter">{@html data.newsletter.textCs}</p>
     <div class=" max-w-screen-sm mx-auto">
+        <div class="py-8">
+            <div class="bg-offwhite border text-gray flex flex-col justify-center text-center h-16 flex-1 rounded-full">
+                <p>email@email.com</p>
+            </div>
+        </div>
+        
     <!-- <Form
         on:submit={handleSubmit}
         let:isSubmitting>
@@ -74,6 +92,11 @@
         </Form> -->
     </div>
    
+</div>
+<div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mb-8 px-8">
+    <DownloadItem text={data.email.textCs} image={data.email.image.url}  />
+    <DownloadItem text={data.discord.textCs} image={data.discord.image.url} />
+    <DownloadItem text={data.support.textCs} image={data.support.image.url} />
 </div>
 {/if} 
 

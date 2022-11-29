@@ -16,6 +16,23 @@ export async function load() {
       support {
         textCs
         textEn
+        image {
+          url
+        }
+      }
+      email {
+        textCs
+        textEn
+        image {
+          url
+        }
+      }
+      discord {
+        textCs
+        textEn
+        image {
+          url
+        }
       }
       newsletter {
         textCs

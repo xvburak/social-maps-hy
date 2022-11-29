@@ -3,6 +3,7 @@
     import Functions from "$lib/components/Functions.svelte";
     import Download from "$lib/components/Download.svelte";
     import Principles from "$lib/components/Principles.svelte";
+    import Logo from "$lib/components/Logo.svelte"
 
     import ScrollSection from "$lib/components/scrollspy/ScrollSection.svelte";
     import { activeSectionId } from '../stores';
@@ -12,8 +13,8 @@
 </script>
 <main class="bg-gray">
     <ScrollSection id="heroSection">
-        <div class="min-h-screen flex items-center justify-center bg-gray">
-            <h1>🧭 Social Maps</h1>
+        <div class="min-h-screen flex items-center justify-center bg-cover bg-[url('./Background_Mapa.png')]">
+            <Logo />
         </div>
     </ScrollSection>
     
@@ -72,10 +73,6 @@
         overflow-x: hidden;
         scroll-behavior: smooth;
     }
-    :global(main) {
-        padding-bottom: 200px;
-    }
-
 </style>
 
 
