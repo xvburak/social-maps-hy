@@ -27,8 +27,8 @@
         gap: '1rem',
         height: '70vh',
         breakpoints: {
-            1000: {
-                perPage: 1,
+            767: {
+                height: '90vh',
             },
         },
     }
