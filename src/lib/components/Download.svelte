@@ -1,19 +1,14 @@
 <script>
-    import { Form, Input, Select, Choice } from 'sveltejs-forms';
+    import { Form, Input } from 'sveltejs-forms';
     import {
         page
     } from '$app/stores';
     let locale = $page.url.pathname
     export let data
 
-    function submitForm() {
-        console.log("hello")
-    }
-
-    function handleSubmit({detail: {values,setSubmitting,resetForm}
+    function handleSubmit({detail: {values,setSubmitting}
     }) {
         setTimeout(() => {
-            formValues = values;
             setSubmitting(false);
             resetForm();
         }, 1000);
