@@ -16,7 +16,11 @@ export async function load() {
       support {
         textCs
         textEn
-      },
+      }
+      newsletter {
+        textCs
+        textEn
+      }
       download {
         textCs
         textEn

@@ -17,6 +17,10 @@ export async function load() {
         textCs
         textEn
       }
+      newsletter {
+        textCs
+        textEn
+      }
       download {
         textCs
         textEn

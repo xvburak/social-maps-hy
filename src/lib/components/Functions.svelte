@@ -52,9 +52,19 @@
 
 
     {#if locale.includes('/en')}
-        <FunctionItem text="ff" image="ff" />
-        <FunctionItem text="ff" image="ff" />
-        <FunctionItem text="ff" image="ff" />
+    <div class="bg-yellow min-h-screen text-white w-full">
+        <div class="pt-24 pb-16 h-full ">
+            <div class="h-full flex flex-col text-black justify-center">
+                <Splide  options={ options } aria-label="My Favorite Images">
+                    {#each data.function as item}
+                        <SplideSlide class="bg-white rounded-xl">
+                            <FunctionItem text={item.textEn} title={item.titleEn} image={item.image.url} />
+                        </SplideSlide>
+                    {/each}
+                </Splide>
+            </div>
+        </div>
+    </div>
     {:else}
     <div class="bg-yellow min-h-screen text-white w-full">
         <div class="pt-24 pb-16 h-full ">

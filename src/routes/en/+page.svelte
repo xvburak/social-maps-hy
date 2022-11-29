@@ -30,7 +30,7 @@
     </ScrollSection>
 
     <ScrollSection id="downloadSection">
-        <Download />
+        <Download data={data.generals[0]} />
     </ScrollSection>
 </main>
 
