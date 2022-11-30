@@ -60,7 +60,7 @@
     {#if locale.includes('/en')}
     <div class="flex flex-col space-y-4">
         <div>    
-            <a href="/">Homepage</a>
+            <a href="/en">Homepage</a>
             <a href="#aboutSection">About</a>
             <a href="#principlesSection">App Principles</a>
             <a href="#functionsSection">Main Functions</a>
