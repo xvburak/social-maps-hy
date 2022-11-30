@@ -17,6 +17,9 @@ module.exports = {
       }],
     },
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('./Background_Mapa.png')"
+      },
       colors: {
         'white':'#FFFFFF',
         'gray': '#BDBDBD',

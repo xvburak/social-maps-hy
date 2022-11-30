@@ -1,12 +1,12 @@
-<div class="p-4 ">
+<div class="p-4">
 
-    <div class="bg-white item p-4 rounded-full flex justify-between items-center">
+    <div class="bg-white item p-4 shadow-2xl rounded-full flex justify-between items-center">
         
         <div class="h-12 w-12 rounded-full mr-4">
             <img src="/compass.png" alt="compass icon">
         </div>
 
-        <h1 class=" text-l ">SocialMaps</h1>
+        <h1 class=" text-l">SocialMaps</h1>
 
         <div class="h-12 w-12 rounded-full">
         </div>

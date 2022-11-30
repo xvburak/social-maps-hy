@@ -67,9 +67,9 @@
             <a href="#downloadSection">Download</a>
         </div>
         <div>
-            <a href="">Contact Us 📧</a>
-            <a href="">Discord  🐽</a>
-            <a href="">Support Us 💖</a>
+            <a href="/">Contact Us 📧</a>
+            <a href="/">Discord  🐽</a>
+            <a href="/">Support Us 💖</a>
         </div>
     
         <button class="inline-block text-left" on:click={toCs}>Česky 🇨🇿</button>
