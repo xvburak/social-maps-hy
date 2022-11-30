@@ -18,7 +18,7 @@
 
 <div class="bg-purple min-h-screen text-white items-center flex flex-col-reverse md:flex-row md:space-x-4 pt-20 md:pt-4">
     <div class="w-full md:w-1/2">
-        <img class="" src={data.aboutTwo.timage.url} alt="mockup aplikace">
+        <img class="" src={data.aboutTwo.image.url} alt="mockup aplikace">
     </div>
     <div class="copy py-4 px-4 md:px-8 w-full md:w-1/2 h-min">
         <p>{@html data.aboutTwo.textEn}</p>
