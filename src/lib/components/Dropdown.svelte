@@ -64,7 +64,7 @@
         <div>    
             <a href="/">Homepage</a>
             <a href="#aboutSection">About</a>
-            <a href="#principlesSection">Principles</a>
+            <a href="#principlesSection">App Principles</a>
             <a href="#functionsSection">Main Functions</a>
             <a href="#downloadSection">Download</a>
         </div>
