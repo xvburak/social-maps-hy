@@ -52,6 +52,9 @@ export async function load() {
       aboutTwo {
         textCs
         textEn
+        image {
+          url
+        }
       }
       function {
         ... on SideScroll {
