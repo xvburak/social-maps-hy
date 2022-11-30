@@ -13,7 +13,7 @@
 </script>
 <main class="bg-gray">
     <ScrollSection id="heroSection">
-        <div class="min-h-screen flex items-center justify-center bg-cover bg-[url('./Background_Mapa.png')]">
+        <div class="min-h-screen flex items-center justify-center bg-cover bg-hero-pattern">
             <Logo />
         </div>
     </ScrollSection>

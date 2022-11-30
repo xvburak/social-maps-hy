@@ -84,9 +84,9 @@
             <a href="#downloadSection">Stáhnout</a>
         </div>
         <div>
-            <a href="">Napiš nám 📧</a>
-            <a href="">Discord  🐽</a>
-            <a href="">Podpoř nás 💖</a>
+            <a href="/">Napiš nám 📧</a>
+            <a href="/">Discord  🐽</a>
+            <a href="/">Podpoř nás 💖</a>
         </div>
     
         <button class="inline-block text-left" on:click={toEn}>English 🇬🇧</button>
