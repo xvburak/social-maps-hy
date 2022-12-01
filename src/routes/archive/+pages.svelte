@@ -11,7 +11,62 @@
 	export let data
 
 </script>
-<main class="bg-gray">
+
+<section class="bg-gray">
+    <ScrollSection id="heroSection">
+        <div class="min-h-screen flex items-center justify-center bg-cover bg-hero-pattern">
+            <Logo />
+        </div>
+    </ScrollSection>
+</section>
+
+<section class="bg-purple">
+    <ScrollSection id="aboutSection">
+        <div class="bg-purple min-h-screen sec text-white items-center flex flex-col md:flex-row md:space-x-4 pt-20 md:pt-4">
+            <div class="copy py-4 px-4 md:px-8 w-full md:w-1/2 h-min">
+                <p>{@html data.generals[0].aboutOne.textCs}</p>
+            </div>
+            <div class="w-full md:w-1/2">
+                <img class="" src={data.generals[0].aboutOne.image.url} alt="mockup aplikace">
+            </div>
+        </div>
+    </ScrollSection>
+</section>
+
+<section class="bg-purple">
+    <ScrollSection >
+        <div class="bg-purple min-h-screen sec text-white items-center flex flex-col-reverse md:flex-row md:space-x-4 pt-20 md:pt-4">
+            <div class="copy py-4 px-4 md:px-8 w-full md:w-1/2 h-min">
+                <p>{@html data.generals[0].aboutTwo.textCs}</p>
+            </div>
+            <div class="w-full md:w-1/2">
+                <img class="" src={data.generals[0].aboutTwo.image.url} alt="mockup aplikace">
+            </div>
+        
+        </div>
+    </ScrollSection>
+</section>
+
+<section class="bg-gray">
+    <ScrollSection id="principlesSection">
+        <Principles data={data.generals[0].principles} />
+    </ScrollSection>
+</section>
+
+<section class="bg-yellow">
+    <ScrollSection id="functionsSection">
+        <Functions data={data.generals[0]} />
+    </ScrollSection>
+
+</section>
+
+<section class="">
+    <ScrollSection id="downloadSection">
+        <Download data={data.generals[0]} />
+    </ScrollSection>
+</section>
+
+<!-- <main class="bg-gray">
     <section>
         <ScrollSection id="heroSection">
             <div class="min-h-screen flex items-center justify-center bg-cover bg-hero-pattern">
@@ -36,7 +91,10 @@
     </ScrollSection>
 </main>
 
-{#if $activeSectionId === "heroSection"}
+
+ -->
+
+ {#if $activeSectionId === "heroSection"}
 <div class="action p-2 bg-purple text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
     <div class="w-full">
         <a class="text-center block" href="#aboutSection">O aplikaci 👇</a>
@@ -70,7 +128,6 @@
 
 
 
-
 <style>
     section {
         @apply overflow-scroll;
@@ -81,11 +138,6 @@
     }
 
     :global(html,body) {
-        min-height: 100%;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        overflow-x: hidden;
         scroll-behavior: smooth;
     }
 </style>
