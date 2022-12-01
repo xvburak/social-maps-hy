@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/img/Background_Mapa.png')"
+        'hero-pattern': "url('/img/hero.jpeg')"
       },
       colors: {
         'white':'#FFFFFF',
