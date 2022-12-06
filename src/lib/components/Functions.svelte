@@ -30,6 +30,9 @@
             767: {
                 height: '85vh',
             },
+            400: {
+                height: '100vh',
+            },
         },
     }
 </script>
