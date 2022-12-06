@@ -99,10 +99,10 @@
 
 <style> 
     .menu a {
-        @apply block mb-2 hover:text-gray
+        @apply block mb-2 text-gray hover:text-black
     }
 
     .menu button {
-        @apply block mb-2 hover:text-gray
+        @apply block mb-2 text-gray hover:text-black
     }
 </style>
