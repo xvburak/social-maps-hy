@@ -3,7 +3,7 @@
     <div class="bg-white item p-4 shadow-2xl rounded-full flex justify-between items-center">
         
         <div class="h-12 w-12 rounded-full mr-4">
-            <img src="/compass_animace.gif" alt="compass icon">
+            <img src="/compass.png" alt="compass icon">
         </div>
 
         <h1 class=" text-l">SocialMaps</h1>

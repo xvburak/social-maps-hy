@@ -54,7 +54,7 @@
 <div on:click={()=> (show = !show)} on:mouseenter={()=> (show = !show)} on:mouseleave={()=> (show = !show)} bind:this={menu}
     class="shadow-xl cursor-pointer rounded-[2rem] menu p-4 bg-white text-m space-x-4 items-start justify-start flex fixed top-4 md:top-8 left-4 md:left-8 z-50">
     <div class="">
-        <p class="">🧭</p>
+        <img class="h-8 w-8" src="/compass_animace.gif" alt="compass icon">
     </div>
     {#if show}
     {#if locale.includes('/en')}
