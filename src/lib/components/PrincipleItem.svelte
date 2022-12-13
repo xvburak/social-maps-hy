@@ -9,7 +9,7 @@
 
 
 <button class="bg-white mb-4 text-black w-full p-6 rounded-xl" on:click={toggle} aria-expanded={isOpen}>
-    <div class="text-m flex justify-between items-center">
+    <div class="text-s md:text-m flex justify-between items-center">
         <p class="text-left"><span class="mr-4">{emoji}</span>{title}</p>
         {#if isOpen}
         <div class="h-6 md:h-8">

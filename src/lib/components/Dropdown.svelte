@@ -67,9 +67,9 @@
             <a href="#downloadSection">Download</a>
         </div>
         <div>
-            <a href="/">Contact Us 📧</a>
-            <a href="/">Discord  🐽</a>
-            <a href="/">Support Us 💖</a>
+            <a href="mailto:info@socialmaps.app">Contact Us 📧</a>
+            <a href="https://discord.gg/NfPgKDy8Ww">Discord  🐽</a>
+            <p class="opacity-50 cursor-not-allowed">Support Us 💖</p>
         </div>
     
         <button class="inline-block text-left" on:click={toCs}>Česky 🇨🇿</button>
@@ -84,9 +84,9 @@
             <a href="#downloadSection">Stáhnout</a>
         </div>
         <div>
-            <a href="/">Napiš nám 📧</a>
-            <a href="/">Discord  🐽</a>
-            <a href="/">Podpoř nás 💖</a>
+            <a href="mailto:info@socialmaps.app">Napiš nám 📧</a>
+            <a href="https://discord.gg/NfPgKDy8Ww">Discord  🐽</a>
+            <p class="opacity-50 cursor-not-allowed">Podpoř nás 💖</p>
         </div>
     
         <button class="inline-block text-left" on:click={toEn}>English 🇬🇧</button>
@@ -100,6 +100,10 @@
 <style> 
     .menu a {
         @apply block mb-2 text-gray hover:text-black
+    }
+
+   .menu p {
+        @apply block mb-2 text-gray
     }
 
     .menu button {

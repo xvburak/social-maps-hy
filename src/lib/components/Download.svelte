@@ -1,4 +1,39 @@
 <script>
+    import {
+        fly,
+        fade
+    } from 'svelte/transition';
+    import sheetdb from 'sheetdb-node';
+    var config = {
+        address: 'https://sheetdb.io/api/v1/upbcth8vfzeie',
+    };
+
+    var client = sheetdb(config);
+    let hasError = false;
+    let submitted = false;
+    let isSuccessVisible = false;
+    const errMessage = "All the fields are mandatory";
+
+    function handleSubmit(emailInput) {
+        isSuccessVisible = true;
+        client.create({ email: emailInput })
+            .then(function(data) {
+            console.log(data);
+        }, function(err){
+            console.log(err);
+        });
+
+        setTimeout(function () {
+            isSuccessVisible = false;
+        }, 4000);
+    }
+
+
+ 
+
+    let emailInput = '';
+
+
     // import { Form, Input } from 'sveltejs-forms';
     import DownloadItem from './DownloadItem.svelte';
     import {
@@ -26,36 +61,40 @@
     <p class="newsletter">{@html data.newsletter.textCs}</p>
     <div class=" max-w-screen-sm mx-auto">
         <div class="py-8">
-            <div class="bg-offwhite border text-gray flex flex-col justify-center text-center h-16 flex-1 rounded-full">
-                <p>email@email.com</p>
-            </div>
-        </div>
-        
-    <!-- <Form
-        on:submit={handleSubmit}
-        let:isSubmitting>
-            {#if isSubmitting}
-                <div class="bg-green border text-white flex flex-col justify-center text-center h-16 flex-1 rounded-full">
-                    <p>Super, tvůj mail jsme přijali, díky!</p>
-                </div>
+                
+            <!-- Email input         -->
+            {#if hasError == true}
+                <p class="error-alert">{errMessage}</p>
             {:else}
-            <div class="flex w-full space-x-4">
-                <Input
-                name="user.email"
-                placeholder="user@example.com" 
-                class="bg-offwhite border border-gray text-black text-center h-16 w-full rounded-full"/>
-                <input class="bg-offwhite border border-gray text-black text-center h-16 flex-1 rounded-full" type="email" name="email" id="email" placeholder="email@email.com">
-                <button type="submit" disabled={isSubmitting} class="border border-gray bg-offwhite hover:bg-green text-white flex-0 rounded-full w-16 h-16">🕊</button>
-            </div>
+                {#if isSuccessVisible}	
+                    
+                        <div class="error-alert container w-full" transition:fade={{duration:150}}>
+                            <div class="form-group bg-green rounded-full p-4">
+                                <p class="text-white text-center w-full h-full">✓ Great, your email adress has been accepted!</p>
+                            </div>
+                        </div>
+                {/if}
             {/if}
-        </Form> -->
+
+            <div class:hidden={isSuccessVisible} class="container w-full ">
+                <form id="surveyForm" class="  flex space-x-4" class:submitted on:submit|preventDefault={handleSubmit(emailInput)}>
+                    <div class="form-group flex-1 ">
+                        <input type="email" class="form-control active:border-none p-4 text-center bg-offwhite w-full h-full rounded-full " placeholder="Your email adress" bind:value={emailInput} required>
+                    </div>
+                    <button class="btn btn-full text-m hover:bg-green h-16 w-16 bg-offwhite rounded-full" on:click={() => submitted = true}>🕊</button>
+                </form>
+            </div>
+
+    </div>
+        
+
     </div>
    
 </div>
 <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mb-8 px-8">
-    <DownloadItem link="xxx" text={data.email.textCs} image={data.email.image.url}  />
-    <DownloadItem link="xxx" text={data.discord.textCs} image={data.discord.image.url} />
-    <DownloadItem link="" text={data.support.textCs} image={data.support.image.url} />
+    <DownloadItem link="mailto:info@socialmaps.app" text={data.email.textCs} image={data.email.image.url}  />
+    <DownloadItem link="https://discord.gg/NfPgKDy8Ww" text={data.discord.textCs} image={data.discord.image.url} />
+    <DownloadItem link="..." text={data.support.textCs} image={data.support.image.url} />
 </div>
 {:else}
 <div class="bg-red  text-white items-center flex py-20 md:py-28 p-4 md:p-8">
@@ -67,36 +106,38 @@
     <p class="newsletter">{@html data.newsletter.textCs}</p>
     <div class=" max-w-screen-sm mx-auto">
         <div class="py-8">
-            <div class="bg-offwhite border text-gray flex flex-col justify-center text-center h-16 flex-1 rounded-full">
-                <p>email@email.com</p>
-            </div>
-        </div>
-        
-    <!-- <Form
-        on:submit={handleSubmit}
-        let:isSubmitting>
-            {#if isSubmitting}
-                <div class="bg-green border text-white flex flex-col justify-center text-center h-16 flex-1 rounded-full">
-                    <p>Super, tvůj mail jsme přijali, díky!</p>
+                
+                <!-- Email input         -->
+                {#if hasError == true}
+                    <p class="error-alert">{errMessage}</p>
+                {:else}
+                    {#if isSuccessVisible}	
+                        
+                            <div class="error-alert container w-full" transition:fade={{duration:150}}>
+                                <div class="form-group bg-green rounded-full p-4">
+                                    <p class="text-white text-center w-full h-full">✓ Super, tvůj mail jsme přijali, díky!</p>
+                                </div>
+                            </div>
+                    {/if}
+                {/if}
+
+                <div class:hidden={isSuccessVisible} class="container w-full ">
+                    <form id="surveyForm" class="  flex space-x-4" class:submitted on:submit|preventDefault={handleSubmit(emailInput)}>
+                        <div class="form-group flex-1 ">
+                            <input type="email" class="form-control active:border-none p-4 text-center bg-offwhite w-full h-full rounded-full " placeholder="Tvá emailová adresa" bind:value={emailInput} required>
+                        </div>
+                        <button class="btn btn-full text-m hover:bg-green h-16 w-16 bg-offwhite rounded-full" on:click={() => submitted = true}>🕊</button>
+                    </form>
                 </div>
-            {:else}
-            <div class="flex w-full space-x-4">
-                <Input
-                name="user.email"
-                placeholder="user@example.com" 
-                class="bg-offwhite border border-gray text-black text-center h-16 w-full rounded-full"/>
-                <input class="bg-offwhite border border-gray text-black text-center h-16 flex-1 rounded-full" type="email" name="email" id="email" placeholder="email@email.com">
-                <button type="submit" disabled={isSubmitting} class="border border-gray bg-offwhite hover:bg-green text-white flex-0 rounded-full w-16 h-16">🕊</button>
-            </div>
-            {/if}
-        </Form> -->
+
+        </div>
     </div>
    
 </div>
 <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mb-8 px-8">
-    <DownloadItem text={data.email.textCs} image={data.email.image.url}  />
-    <DownloadItem text={data.discord.textCs} image={data.discord.image.url} />
-    <DownloadItem text={data.support.textCs} image={data.support.image.url} />
+    <DownloadItem link="mailto:info@socialmaps.app" text={data.email.textCs} image={data.email.image.url}  />
+    <DownloadItem link="https://discord.gg/NfPgKDy8Ww"  text={data.discord.textCs} image={data.discord.image.url} />
+    <DownloadItem link="" text={data.support.textCs} image={data.support.image.url} />
 </div>
 {/if} 
 
@@ -111,5 +152,13 @@
     .copy {
         @apply text-center text-m leading-[1.22];
     }
+
+    .submitted input:invalid {
+		border: 1px solid #c00;
+	}
+
+	.submitted input:focus:invalid {
+		outline: 1px solid #c00;
+	}
     
     </style>
