@@ -28,7 +28,7 @@
         height: '70vh',
         breakpoints: {
             767: {
-                height: '85vh',
+                height: '90vh',
             },
             400: {
                 height: '100vh',

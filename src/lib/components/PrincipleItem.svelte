@@ -8,8 +8,8 @@
 </script>
 
 
-<button class="bg-white mb-4 text-black w-full p-4 md:p-8 rounded-xl" on:click={toggle} aria-expanded={isOpen}>
-    <div class="text-s md:text-m flex justify-between items-center">
+<button class="bg-white mb-4 text-black w-full p-6 rounded-xl" on:click={toggle} aria-expanded={isOpen}>
+    <div class="text-m flex justify-between items-center">
         <p class="text-left"><span class="mr-4">{emoji}</span>{title}</p>
         {#if isOpen}
         <div class="h-6 md:h-8">
@@ -28,11 +28,11 @@
         {/if}
     </div>
     
-    <div class="text-gray subs w-full text-s text-left mt-4 md:mt-8" class:hidden={isOpen}>
+    <div class="text-gray subs w-full text-s text-left mt-4" class:hidden={isOpen}>
         <p class="mb-0">{@html text.substring(0,240)}...</p>
     </div>
 
-    <div class="text-gray text-s w-full text-left mt-4 md:mt-8" class:hidden={!isOpen}>
+    <div class="text-gray text-s w-full text-left mt-4 " class:hidden={!isOpen}>
         <p class="mb-0">{@html text}</p>
     </div>
 

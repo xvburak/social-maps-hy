@@ -6,7 +6,7 @@
 
 html, body {
     font-family: 'Inter', sans-serif;
-    @apply text-black;
+    @apply text-black antialiased;
     font-size: 14px;
 }
 
