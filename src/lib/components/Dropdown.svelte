@@ -22,9 +22,9 @@
     onMount(() => {
 
         const handleOutsideClick = (event) => {
-            if (show && menu.contains(event.target)) {
+            if (show && !menu.contains(event.target)) {
                 show = false;
-            } else if (show && menu.event.target) {
+            } else if (show && menu.contains(event.target)) {
                 show = false;
             }
         };
