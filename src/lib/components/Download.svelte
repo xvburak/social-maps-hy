@@ -53,9 +53,9 @@
    
 </div>
 <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mb-8 px-8">
-    <DownloadItem text={data.email.textCs} image={data.email.image.url}  />
-    <DownloadItem text={data.discord.textCs} image={data.discord.image.url} />
-    <DownloadItem text={data.support.textCs} image={data.support.image.url} />
+    <DownloadItem link="xxx" text={data.email.textCs} image={data.email.image.url}  />
+    <DownloadItem link="xxx" text={data.discord.textCs} image={data.discord.image.url} />
+    <DownloadItem link="" text={data.support.textCs} image={data.support.image.url} />
 </div>
 {:else}
 <div class="bg-red  text-white items-center flex py-20 md:py-28 p-4 md:p-8">
