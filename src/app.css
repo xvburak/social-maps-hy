@@ -30,23 +30,23 @@ img {
 }
 
 /* lg */
-/* @media (min-width: 1024px) {
+@media (min-width: 1024px) {
     html, body {
         font-size: 20px;
     }
-} */
+}
 
 /* xl */
-/* @media (min-width: 1280px) {
+@media (min-width: 1280px) {
     html, body {
         font-size: 22px;
     } 
-} */
+}
 
 /* 2xl */
 @media (min-width: 1536px) {
     html, body {
-        font-size: 30px;
+        font-size: 24px;
     }
 }
 

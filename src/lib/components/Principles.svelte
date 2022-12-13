@@ -8,7 +8,7 @@
 </script>
 
 <div class="bg-gray min-h-screen text-white pt-16 md:pt-28 p-4 md:p-8">
-    <div class="pt-8 max-w-screen-xl mx-auto">
+    <div class="pt-8 max-w-screen-2xl mx-auto">
         {#if locale.includes('/en')}
             {#each data as item}
             <PrincipleItem emoji={item.emoji} title={item.titleEn} text={item.textEn} />
