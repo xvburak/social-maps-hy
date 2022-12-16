@@ -25,13 +25,16 @@
         focus: 'center',
         perPage: 1,
         gap: '1rem',
-        height: '70vh',
+        height: '85vh',
         breakpoints: {
+            1024: {
+                height: '600px',
+            },
             767: {
-                height: '90vh',
+                height: '600px',
             },
             400: {
-                height: '100vh',
+                height: '600px',
             },
         },
     }
