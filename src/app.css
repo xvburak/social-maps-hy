@@ -46,7 +46,7 @@ img {
 /* 2xl */
 @media (min-width: 1536px) {
     html, body {
-        font-size: 21px;
+        font-size: 20px;
     }
 }
 

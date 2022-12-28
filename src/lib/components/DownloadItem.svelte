@@ -4,7 +4,7 @@
     export let text
 </script>
 
-<a href={link} class="w-full cursor-pointer bg-white shad p-8 flex flex-col buble justify-between rounded-xl">
+<a target="_blank" rel="noreferrer" href={link} class="w-full cursor-pointer bg-white shad p-8 flex flex-col buble justify-between rounded-xl">
     <p class="text-center mb-8">{text}</p>
     <div class="h-32 overflow-hidden flex justify-center">
         <img class="h-full w-auto" src={image} alt="icon">

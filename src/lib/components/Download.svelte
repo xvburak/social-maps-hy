@@ -92,10 +92,14 @@
    
 </div>
 <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mb-8 px-8">
-    <DownloadItem link="mailto:info@socialmaps.app" text={data.email.textCs} image={data.email.image.url}  />
-    <DownloadItem link="https://discord.gg/NfPgKDy8Ww" text={data.discord.textCs} image={data.discord.image.url} />
-    <DownloadItem link="..." text={data.support.textCs} image={data.support.image.url} />
-</div>
+    <DownloadItem link="mailto:info@socialmaps.app" text={data.email.textEn} image={data.email.image.url}  />
+    <DownloadItem link="https://discord.gg/NfPgKDy8Ww" text={data.discord.textEn} image={data.discord.image.url} />
+    <a onclick="return false" href="/" class="w-full cursor-pointer bg-white shad p-8 flex flex-col buble justify-between rounded-xl">
+        <p class="text-center mb-8">{data.support.textEn}</p>
+        <div class="h-32 overflow-hidden flex justify-center">
+            <img class="h-full w-auto" src={data.support.image.url} alt="icon">
+        </div>
+    </a></div>
 {:else}
 <div class="bg-red  text-white items-center flex py-20 md:py-28 p-4 md:p-8">
     <div class="copy py-4 px-4 md:px-8 w-full ">
@@ -137,7 +141,12 @@
 <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mb-8 px-8">
     <DownloadItem link="mailto:info@socialmaps.app" text={data.email.textCs} image={data.email.image.url}  />
     <DownloadItem link="https://discord.gg/NfPgKDy8Ww"  text={data.discord.textCs} image={data.discord.image.url} />
-    <DownloadItem link="" text={data.support.textCs} image={data.support.image.url} />
+    <a onclick="return false" href="/" class="w-full cursor-pointer bg-white shad p-8 flex flex-col buble justify-between rounded-xl">
+        <p class="text-center mb-8">{data.support.textCs}</p>
+        <div class="h-32 overflow-hidden flex justify-center">
+            <img class="h-full w-auto" src={data.support.image.url} alt="icon">
+        </div>
+    </a>
 </div>
 {/if} 
 
@@ -160,5 +169,13 @@
 	.submitted input:focus:invalid {
 		outline: 1px solid #c00;
 	}
+
+    .shad {
+        box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .buble {
+        @apply last-of-type:opacity-50 last:cursor-not-allowed;
+    }
     
     </style>
