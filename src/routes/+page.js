@@ -74,8 +74,18 @@ export async function load() {
       principles(first: 20) {
         ... on Principle {
           emoji
-          textCs
-          textEn
+          textCs {
+            markdown
+            html
+            raw
+            text
+          }
+          textEn {
+            markdown
+            html
+            raw
+            text
+          }
           titleCs
           titleEn
         }

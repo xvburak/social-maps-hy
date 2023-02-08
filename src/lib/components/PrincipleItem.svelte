@@ -2,6 +2,7 @@
     export let emoji
     export let title
     export let text
+    export let textshort
 
     let isOpen = false
     const toggle = () => isOpen = !isOpen
@@ -29,7 +30,7 @@
     </div>
     
     <div class="text-gray subs w-full text-s text-left mt-4" class:hidden={isOpen}>
-        <p class="mb-0">{@html text.substring(0,240)}...</p>
+        <p class="mb-0">{@html text.substring(0,260)+"..."}</p>
     </div>
 
     <div class="text-gray text-s w-full text-left mt-4 " class:hidden={!isOpen}>
