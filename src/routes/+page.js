@@ -1,16 +1,16 @@
 import {
-    gql,
-    GraphQLClient
+  gql,
+  GraphQLClient
 } from 'graphql-request'
 
 export async function load() {
-        const hygraph = new GraphQLClient(
-            import.meta.env.VITE_HYGRAPH_URL, {
-                headers: {},
-            }
-        )
+  const hygraph = new GraphQLClient(
+    import.meta.env.VITE_HYGRAPH_URL, {
+      headers: {},
+    }
+  )
 
-        const query = gql `
+  const query = gql `
   query MyQuery {
     generals {
       support {
@@ -95,7 +95,11 @@ export async function load() {
   
 `
 
-const { generals } = await hygraph.request(query)
+  const {
+    generals
+  } = await hygraph.request(query)
 
-return { generals }
+  return {
+    generals
+  }
 }

@@ -8,5 +8,5 @@
 </script>
 
 <Dropdown />
-<slot />
+    <slot />
 <Footer />

@@ -15,6 +15,10 @@ img {
     height: auto;
 }
 
+em {
+  font-style: normal;
+}
+
 /* sm */
 @media (min-width: 640px) {
     html, body {
