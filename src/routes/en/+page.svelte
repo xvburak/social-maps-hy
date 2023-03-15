@@ -38,31 +38,31 @@
 {#if $activeSectionId === "heroSection"}
 <div class="action p-2 bg-purple text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
     <div class="w-full">
-        <a class="text-center block" href="#aboutSection">O aplikaci 👇</a>
+        <a class="text-center block" href="#aboutSection">About 👇</a>
     </div> 
 </div>
 {:else if $activeSectionId === "/"}
 <div class="action p-2 bg-purple text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
     <div class="w-full">
-        <a class="text-center block" href="#aboutSection">O aplikaci 👇</a>
+        <a class="text-center block" href="#aboutSection">About 👇</a>
     </div> 
 </div>
 {:else if $activeSectionId === "aboutSection"}
 <div class="action p-2 bg-gray text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
     <div class="w-full">
-        <a class="text-center block" href="#principlesSection">Základní principy aplikace 👇</a>
+        <a class="text-center block" href="#principlesSection">Core principles 👇</a>
     </div> 
 </div>
 {:else if $activeSectionId === "principlesSection"}
 <div class="action p-2 bg-yellow text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
     <div class="w-full">
-        <a class="text-center block" href="#functionsSection">Hlavní funkce aplikace 👇</a>
+        <a class="text-center block" href="#functionsSection">Functions 👇</a>
     </div> 
 </div>
 {:else if $activeSectionId === "functionsSection"}
 <div class="action p-2 bg-red text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
     <div class="w-full">
-        <a class="text-center block" href="#downloadSection">Stáhnout 👇</a>
+        <a class="text-center block" href="#downloadSection">Download 👇</a>
     </div> 
 </div>
 {/if}

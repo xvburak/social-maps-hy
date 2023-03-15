@@ -12,11 +12,7 @@
 
 <div class="bg-gray min-h-screen text-white pt-16 md:pt-28 p-4 md:p-8">
     <div class="pt-8 max-w-screen-2xl mx-auto">
-        <!-- {#if locale.includes('/en')}
-            {#each data as item}
-                <PrincipleItemEn emoji={item.emoji} title={item.titleEn} text={item.textEn.html} />
-            {/each}
-        {:else} -->
+
             {#each data as item}
                 {#if locale.includes('/en')}
                     <PrincipleItem emoji={item.emoji} title={item.titleEn} text={item.textEn.html} />
@@ -24,6 +20,6 @@
                     <PrincipleItem emoji={item.emoji} title={item.titleCs} text={item.textCs.html} />
                 {/if}
             {/each}
-        <!-- {/if}  -->
+
     </div>
 </div>
