@@ -6,10 +6,13 @@
     import Logo from "$lib/components/Logo.svelte"
     import ScrollSection from "$lib/components/scrollspy/ScrollSection.svelte";
     import { activeSectionId } from '../stores';
+    import Map from '../lib/components/map/Map.svelte'
 	export let data
 </script>
     <main class="bg-gray">
-        
+        <section class="w-[100vw] h-[100vh] bg-[#E7E5DF]">
+            <Map/>
+        </section>
         <section>
             <ScrollSection id="heroSection">
                 <div class="min-h-screen flex items-center justify-center bg-cover bg-hero-pattern">
@@ -36,11 +39,11 @@
 
 
 {#if $activeSectionId === "heroSection"}
-<div class="action p-2 bg-purple text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
+<!-- <div class="action p-2 bg-purple text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
     <div class="w-full">
         <a class="text-center block" href="#aboutSection">O aplikaci 👇</a>
     </div> 
-</div>
+</div> -->
 {:else if $activeSectionId === "/"}
 <div class="action p-2 bg-purple text-white  fixed text-xl flex flex-col justify-center z-[90]  bottom-0 w-full">  
     <div class="w-full">

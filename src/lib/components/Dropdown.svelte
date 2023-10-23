@@ -77,7 +77,7 @@
     {:else}
     <div class="flex flex-col space-y-4">
         <div>    
-            <a href="/">Úvodní stránka</a>
+            <a href="/">Mapa</a>
             <a href="#aboutSection">O aplikaci</a>
             <a href="#principlesSection">Základní principy</a>
             <a href="#functionsSection">Hlavní funkce aplikace</a>

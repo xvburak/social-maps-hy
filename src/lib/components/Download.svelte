@@ -18,9 +18,8 @@
         isSuccessVisible = true;
         client.create({ email: emailInput })
             .then(function(data) {
-            console.log(data);
         }, function(err){
-            console.log(err);
+
         });
 
         setTimeout(function () {

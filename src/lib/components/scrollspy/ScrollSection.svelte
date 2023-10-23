@@ -10,7 +10,7 @@
     const handleEnter = id => ($activeSectionId = id);
 </script>
 
-<section {id} 
+<section {id}
     class:active={$activeSectionId===id} 
     use:inview={options} 
     on:enter={()=> handleEnter(id)}

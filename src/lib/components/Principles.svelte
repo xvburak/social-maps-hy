@@ -7,7 +7,6 @@
     } from '$app/stores';
     let locale = $page.url.pathname
     export let data
-    console.log(data)
 </script>
 
 <div class="bg-gray min-h-screen text-white pt-16 md:pt-28 p-4 md:p-8">

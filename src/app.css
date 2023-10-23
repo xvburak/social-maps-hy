@@ -1,11 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'Inter var';
+	font-weight: 100 900;
+	font-display: swap;
+	font-style: normal;
+	font-named-instance: 'Regular';
+	src: url("./Inter-roman.var.woff2?v=3.19") format("woff2");
+}
+@font-face {
+	font-family: 'Inter var';
+	font-weight: 100 900;
+	font-display: swap;
+	font-style: italic;
+	font-named-instance: 'Italic';
+	src: url("./Inter-italic.var.woff2?v=3.19") format("woff2");
+}
 
 html, body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter var', sans-serif;
     @apply text-black antialiased;
     font-size: 14px;
 }
@@ -80,4 +95,43 @@ em {
   .splide__slide.is-active {
     opacity: 100%;
     border: none;
+  }
+
+  /* map */
+
+  .mapboxgl-popup-tip{
+    display: none;
+  }
+  
+  .marker,
+  .mapboxgl-popup .mapboxgl-popup-content{
+    @apply bg-white text-[#000000] px-3 py-1 rounded-full shadow-xl cursor-pointer hover:scale-110;
+  
+  }
+  
+  .mapboxgl-popup .mapboxgl-popup-content{
+    pointer-events: none
+  }
+  
+  .prose{
+    font-size: 1rem;
+    & p + p {
+      @apply mt-[1.5rem];
+    }
+    & h1{
+      font-size: 2rem;
+    }
+    & h2{
+      font-size: 1.5rem;
+    }
+    & a{
+      @apply underline
+    }
+    & iframe{
+      @apply w-full h-[360px]
+    }
+  }
+  
+  .gallery img{
+    @apply w-full border;
   }
