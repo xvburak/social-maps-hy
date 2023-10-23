@@ -67,7 +67,7 @@
             {:else}
                 {#if isSuccessVisible}	
                     
-                        <div class="error-alert container w-full" transition:fade={{duration:150}}>
+                        <div class="error-alert container w-full" transition:fade|global={{duration:150}}>
                             <div class="form-group bg-green rounded-full p-4">
                                 <p class="text-white text-center w-full h-full">✓ Great, your email adress has been accepted!</p>
                             </div>
@@ -116,7 +116,7 @@
                 {:else}
                     {#if isSuccessVisible}	
                         
-                            <div class="error-alert container w-full" transition:fade={{duration:150}}>
+                            <div class="error-alert container w-full" transition:fade|global={{duration:150}}>
                                 <div class="form-group bg-green rounded-full p-4">
                                     <p class="text-white text-center w-full h-full">✓ Super, tvůj mail jsme přijali, díky!</p>
                                 </div>

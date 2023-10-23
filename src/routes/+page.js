@@ -5,7 +5,7 @@ import {
 
 export async function load() {
   const hygraph = new GraphQLClient(
-    'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clb0srkrj2t2t01up0kw357fu/master', {
+    import.meta.env.VITE_HYGRAPH_URL, {
       headers: {},
     }
   )
