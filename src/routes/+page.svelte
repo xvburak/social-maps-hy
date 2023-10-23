@@ -10,7 +10,7 @@
 	export let data
 </script>
     <main class="bg-gray">
-        <section class="w-[100vw] h-[100vh] bg-[#E7E5DF]">
+        <section class="w-[100svw] h-[100svh] bg-[#E7E5DF]">
             <Map/>
         </section>
         <section>

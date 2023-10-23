@@ -10,7 +10,7 @@
 </script>
 
 
-<div class="{$selectedItem ? 'max-md:translate-y-0 md:translate-x-0' : 'max-md:translate-y-full md:translate-x-full' } {isViewExtended ? 'max-md:h-[100svh]' : 'max-md:h-[50vh]'} z-[500] transition-[transform,height] text-[#000000] ease-in-out absolute p-5 max-md:bottom-0 max-md:inset-x-0 md:inset-y-0 md:right-0 md:w-[660px]">
+<div class="{$selectedItem ? 'max-md:translate-y-0 md:translate-x-0' : 'max-md:translate-y-full md:translate-x-full' } {isViewExtended ? 'max-md:h-[85svh]' : 'max-md:h-[50vh]'} z-[500] transition-[transform,height] text-[#000000] ease-in-out absolute p-5 max-md:bottom-0 max-md:inset-x-0 md:inset-y-0 md:right-0 md:w-[660px]">
 	<div class="bg-white relative rounded-xl overflow-hidden h-full shadow-xl">
 		{#if $selectedItem}
 		<div class="relative h-full grid grid-rows-[auto,1fr]">
