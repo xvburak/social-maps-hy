@@ -1,5 +1,6 @@
 import { writable, get } from "svelte/store";
-import { Marker, Popup } from "mapbox-gl";
+import mapbox from 'mapbox-gl';
+const { Popup, Marker } = mapbox;
 import polylabel from 'polylabel'
 
 const inActiveColor = '#BDBDBD'

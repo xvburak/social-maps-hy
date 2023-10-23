@@ -1,5 +1,6 @@
 <script>
-	import { Map } from "mapbox-gl";
+	import mapbox from 'mapbox-gl';
+	const { Popup, Marker, Map } = mapbox;
 	import { kml } from "@tmcw/togeojson";
 	import InfoView from "./InfoView.svelte";
 	import MoreInfo from "./MoreInfo.svelte";
