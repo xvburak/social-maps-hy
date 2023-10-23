@@ -13,13 +13,13 @@
         <section class="w-[100svw] h-[100svh] bg-[#E7E5DF]">
             <Map/>
         </section>
-        <section>
+        <!-- <section>
             <ScrollSection id="heroSection">
                 <div class="min-h-screen flex items-center justify-center bg-cover bg-hero-pattern">
                     <Logo />
                 </div>
             </ScrollSection>
-        </section>
+        </section> -->
         <ScrollSection id="aboutSection">
             <About data={data.generals[0]} />
         </ScrollSection>
@@ -79,7 +79,7 @@
         position: sticky;
         position: -webkit-sticky;
         top:0;
-        height: 100vh;
+        height: 100svh;
     }
 
     :global(html,body) {
